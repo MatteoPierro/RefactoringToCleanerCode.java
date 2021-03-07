@@ -3,7 +3,7 @@ public class BigDiceGame {
         if (isSomethingPair(st)) {
             return SomethingPair.something(dice1, dice2, dice3, dice4, dice5);
         }
-        if (st == ScoringType.TwoPair) {
+        if (isSomethingTwoPair(st)) {
             return SomethingTwoPair.calculateScoreForTwoPair(dice1, dice2, dice3, dice4, dice5);
         }
         if (st == ScoringType.FullHouse) {
@@ -14,6 +14,10 @@ public class BigDiceGame {
         }
 
         return 0;
+    }
+
+    private static boolean isSomethingTwoPair(ScoringType st) {
+        return st == ScoringType.TwoPair;
     }
 
     private static boolean isSomethingPair(ScoringType st) {
