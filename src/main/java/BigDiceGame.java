@@ -81,9 +81,9 @@ public class BigDiceGame {
             }
 
             case FiveOfAKind: {
-                int[] dice1 = {die1, dieTwo, d3, dice4, fifthDie};
+                int[] dices = {die1, dieTwo, d3, dice4, fifthDie};
                 var counts2 = new int[6];
-                for (int die : dice1) {
+                for (int die : dices) {
                     counts2[die - 1]++;
                 }
 
