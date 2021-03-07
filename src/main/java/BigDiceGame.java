@@ -1,6 +1,5 @@
 public class BigDiceGame {
     public static int CalculateScore(ScoringType st, int dice1, int dice2, int dice3, int dice4, int dice5) {
-        int bigScore = 50;
         switch (st) {
             case Pair: {
                 return something(dice1, dice2, dice3, dice4, dice5);
@@ -15,14 +14,14 @@ public class BigDiceGame {
             }
 
             case FiveOfAKind: {
-                return somethingFiveOfAKind(dice1, dice2, dice3, dice4, dice5, bigScore);
+                return somethingFiveOfAKind(dice1, dice2, dice3, dice4, dice5);
             }
         }
 
         return 0;
     }
 
-    private static int somethingFiveOfAKind(int dice1, int dice2, int dice3, int dice4, int dice5, int bigScore) {
+    private static int somethingFiveOfAKind(int dice1, int dice2, int dice3, int dice4, int dice5) {
         int[] dices = {dice1, dice2, dice3, dice4, dice5};
         var counts2 = new int[6];
         for (int die : dices) {
@@ -31,7 +30,7 @@ public class BigDiceGame {
 
         for (var i1 = 0; i1 != 6; i1++) {
             if (counts2[i1] == 5) {
-                return bigScore;
+                return 50;
             }
         }
 
