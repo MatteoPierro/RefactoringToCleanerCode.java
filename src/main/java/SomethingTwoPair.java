@@ -21,4 +21,8 @@ public class SomethingTwoPair {
 
         return 0;
     }
+
+    static boolean isSomethingTwoPair(ScoringType st) {
+        return st == ScoringType.TwoPair;
+    }
 }
