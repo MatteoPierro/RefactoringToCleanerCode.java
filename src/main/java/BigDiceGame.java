@@ -1,6 +1,6 @@
 public class BigDiceGame {
     public static int CalculateScore(ScoringType st, int dice1, int dice2, int dice3, int dice4, int dice5) {
-        if (isSomethingPair(st)) {
+        if (SomethingPair.isSomethingPair(st)) {
             return SomethingPair.something(dice1, dice2, dice3, dice4, dice5);
         }
         if (SomethingTwoPair.isSomethingTwoPair(st)) {
@@ -14,10 +14,6 @@ public class BigDiceGame {
         }
 
         return 0;
-    }
-
-    private static boolean isSomethingPair(ScoringType st) {
-        return st == ScoringType.Pair;
     }
 
 }
