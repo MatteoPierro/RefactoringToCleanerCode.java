@@ -17,7 +17,7 @@ public class SomethingPair {
         return 0;
     }
 
-    static boolean isSomethingPair(ScoringType st) {
+    static boolean is(ScoringType st) {
         return st == ScoringType.Pair;
     }
 }
