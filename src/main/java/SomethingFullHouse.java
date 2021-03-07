@@ -35,4 +35,8 @@ public class SomethingFullHouse {
 
         return 0;
     }
+
+    static boolean isSomethingFullHouse(ScoringType st) {
+        return st == ScoringType.FullHouse;
+    }
 }
