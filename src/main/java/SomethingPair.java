@@ -1,5 +1,5 @@
 public class SomethingPair {
-    static int something(int dice1, int dice2, int dice3, int dice4, int dice5) {
+    static int calculate(int dice1, int dice2, int dice3, int dice4, int dice5) {
         int value = 2;
         int[] tallies1;
         tallies1 = new int[6];

@@ -1,5 +1,5 @@
 public class SomethingTwoPair {
-    static int calculateScoreForTwoPair(int dice1, int dice2, int dice3, int dice4, int dice5) {
+    static int calculate(int dice1, int dice2, int dice3, int dice4, int dice5) {
         var counts1 = new int[6];
         counts1[dice1 - 1]++;
         counts1[dice2 - 1]++;

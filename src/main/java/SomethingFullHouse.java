@@ -1,5 +1,5 @@
 public class SomethingFullHouse {
-    static int somethingFullHouse(int dice1, int dice2, int dice3, int dice4, int dice5) {
+    static int calculate(int dice1, int dice2, int dice3, int dice4, int dice5) {
         int[] tallies;
         var _2 = false;
         int i;
