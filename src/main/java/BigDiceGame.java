@@ -30,7 +30,8 @@ public class BigDiceGame {
 
         for (var i1 = 0; i1 != 6; i1++) {
             if (counts2[i1] == 5) {
-                return 50;
+                final int bigScore = 50;
+                return bigScore;
             }
         }
 
