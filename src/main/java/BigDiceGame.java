@@ -9,15 +9,11 @@ public class BigDiceGame {
         if (isSomethingFullHouse(st)) {
             return SomethingFullHouse.somethingFullHouse(dice1, dice2, dice3, dice4, dice5);
         }
-        if (isFiveOfAKind(st)) {
+        if (SomethingFiveOfAKind.isFiveOfAKind(st)) {
             return SomethingFiveOfAKind.somethingFiveOfAKind(dice1, dice2, dice3, dice4, dice5);
         }
 
         return 0;
-    }
-
-    private static boolean isFiveOfAKind(ScoringType st) {
-        return st == ScoringType.FiveOfAKind;
     }
 
     private static boolean isSomethingFullHouse(ScoringType st) {
