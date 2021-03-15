@@ -12,7 +12,7 @@ public class BigDiceGame {
         }
         {
             if (SomethingFullHouse.is(st)) {
-                return SomethingFullHouse.calculate(dice1, dice2, dice3, dice4, dice5);
+                return new SomethingFullHouse().calculate(dice1, dice2, dice3, dice4, dice5);
             }
         }
         {
