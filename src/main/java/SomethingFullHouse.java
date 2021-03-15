@@ -1,6 +1,6 @@
 public class SomethingFullHouse {
 
-    static boolean is(ScoringType st) {
+    boolean is(ScoringType st) {
         return st == ScoringType.FullHouse;
     }
 

@@ -1,6 +1,6 @@
 public class SomethingFiveOfAKind {
 
-    static boolean is(ScoringType st) {
+    boolean is(ScoringType st) {
         return st == ScoringType.FiveOfAKind;
     }
 
