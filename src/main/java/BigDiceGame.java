@@ -1,23 +1,27 @@
 public class BigDiceGame {
     public static int CalculateScore(ScoringType st, int dice1, int dice2, int dice3, int dice4, int dice5) {
         {
-            if (new SomethingPair().is(st)) {
-                return new SomethingPair().calculate(dice1, dice2, dice3, dice4, dice5);
+            SomethingPair somethingPair = new SomethingPair();
+            if (somethingPair.is(st)) {
+                return somethingPair.calculate(dice1, dice2, dice3, dice4, dice5);
             }
         }
         {
-            if (new SomethingTwoPair().is(st)) {
-                return new SomethingTwoPair().calculate(dice1, dice2, dice3, dice4, dice5);
+            SomethingTwoPair somethingTwoPair = new SomethingTwoPair();
+            if (somethingTwoPair.is(st)) {
+                return somethingTwoPair.calculate(dice1, dice2, dice3, dice4, dice5);
             }
         }
         {
-            if (new SomethingFullHouse().is(st)) {
-                return new SomethingFullHouse().calculate(dice1, dice2, dice3, dice4, dice5);
+            SomethingFullHouse somethingFullHouse = new SomethingFullHouse();
+            if (somethingFullHouse.is(st)) {
+                return somethingFullHouse.calculate(dice1, dice2, dice3, dice4, dice5);
             }
         }
         {
-            if (new SomethingFiveOfAKind().is(st)) {
-                return new SomethingFiveOfAKind().calculate(dice1, dice2, dice3, dice4, dice5);
+            SomethingFiveOfAKind somethingFiveOfAKind = new SomethingFiveOfAKind();
+            if (somethingFiveOfAKind.is(st)) {
+                return somethingFiveOfAKind.calculate(dice1, dice2, dice3, dice4, dice5);
             }
         }
 
