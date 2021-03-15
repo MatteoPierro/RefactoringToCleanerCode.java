@@ -1,10 +1,10 @@
-public class SomethingTwoPair {
+public class SomethingTwoPair implements Something{
 
-    boolean is(ScoringType st) {
+    public boolean is(ScoringType st) {
         return st == ScoringType.TwoPair;
     }
 
-    int calculate(int dice1, int dice2, int dice3, int dice4, int dice5) {
+    public int calculate(int dice1, int dice2, int dice3, int dice4, int dice5) {
         var counts1 = new int[6];
         counts1[dice1 - 1]++;
         counts1[dice2 - 1]++;
