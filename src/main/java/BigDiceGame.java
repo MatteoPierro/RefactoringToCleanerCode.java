@@ -1,8 +1,10 @@
 import java.util.stream.Stream;
 
 public class BigDiceGame {
+    public static final Scorer[] SCORERS = {new ScorerPair(), new ScorerTwoPair(), new ScorerFullHouse(), new ScorerFiveOfAKind()};
+
     public static int CalculateScore(ScoringType st, int dice1, int dice2, int dice3, int dice4, int dice5) {
-        return Stream.of(new SomethingPair(), new SomethingTwoPair(), new SomethingFullHouse(), new SomethingFiveOfAKind())
+        return Stream.of(SCORERS)
                 .filter(something -> something.is(st))
                 .findFirst()
                     .map(something -> something.calculate(dice1, dice2, dice3, dice4, dice5))

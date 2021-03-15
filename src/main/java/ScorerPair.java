@@ -1,4 +1,4 @@
-public class SomethingPair implements Something {
+public class ScorerPair implements Scorer {
 
     @Override
     public boolean is(ScoringType st) {

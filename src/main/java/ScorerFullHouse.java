@@ -1,4 +1,4 @@
-public class SomethingFullHouse implements Something {
+public class ScorerFullHouse implements Scorer {
 
     public boolean is(ScoringType st) {
         return st == ScoringType.FullHouse;

@@ -1,4 +1,4 @@
-public class SomethingTwoPair implements Something{
+public class ScorerTwoPair implements Scorer {
 
     public boolean is(ScoringType st) {
         return st == ScoringType.TwoPair;

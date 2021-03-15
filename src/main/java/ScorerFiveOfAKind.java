@@ -1,4 +1,4 @@
-public class SomethingFiveOfAKind implements Something {
+public class ScorerFiveOfAKind implements Scorer {
 
     public boolean is(ScoringType st) {
         return st == ScoringType.FiveOfAKind;
