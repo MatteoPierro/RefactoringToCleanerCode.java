@@ -1,10 +1,12 @@
-public class SomethingPair {
+public class SomethingPair implements Something {
 
-    boolean is(ScoringType st) {
+    @Override
+    public boolean is(ScoringType st) {
         return st == ScoringType.Pair;
     }
 
-    int calculate(int dice1, int dice2, int dice3, int dice4, int dice5) {
+    @Override
+    public int calculate(int dice1, int dice2, int dice3, int dice4, int dice5) {
         int value = 2;
         int[] tallies1;
         tallies1 = new int[6];
