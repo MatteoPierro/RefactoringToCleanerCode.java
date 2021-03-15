@@ -17,7 +17,7 @@ public class BigDiceGame {
         }
         {
             if (SomethingFiveOfAKind.is(st)) {
-                return SomethingFiveOfAKind.calculate(dice1, dice2, dice3, dice4, dice5);
+                return new SomethingFiveOfAKind().calculate(dice1, dice2, dice3, dice4, dice5);
             }
         }
 

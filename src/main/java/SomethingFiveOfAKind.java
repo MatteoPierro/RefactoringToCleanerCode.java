@@ -1,5 +1,10 @@
 public class SomethingFiveOfAKind {
-    static int calculate(int dice1, int dice2, int dice3, int dice4, int dice5) {
+
+    static boolean is(ScoringType st) {
+        return st == ScoringType.FiveOfAKind;
+    }
+
+    int calculate(int dice1, int dice2, int dice3, int dice4, int dice5) {
         int[] dices = {dice1, dice2, dice3, dice4, dice5};
         var counts2 = new int[6];
         for (int die : dices) {
@@ -14,9 +19,5 @@ public class SomethingFiveOfAKind {
         }
 
         return 0;
-    }
-
-    static boolean is(ScoringType st) {
-        return st == ScoringType.FiveOfAKind;
     }
 }
