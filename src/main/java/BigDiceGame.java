@@ -8,9 +8,9 @@ public class BigDiceGame {
             }
         }
         {
-            SomethingTwoPair somethingTwoPair = new SomethingTwoPair();
-            if (somethingTwoPair.is(st)) {
-                return somethingTwoPair.calculate(dice1, dice2, dice3, dice4, dice5);
+            Something something = new SomethingTwoPair();
+            if (something.is(st)) {
+                return something.calculate(dice1, dice2, dice3, dice4, dice5);
             }
         }
         {
