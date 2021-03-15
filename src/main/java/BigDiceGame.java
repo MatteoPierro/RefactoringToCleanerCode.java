@@ -7,7 +7,7 @@ public class BigDiceGame {
         }
         {
             if (SomethingTwoPair.is(st)) {
-                return SomethingTwoPair.calculate(dice1, dice2, dice3, dice4, dice5);
+                return new SomethingTwoPair().calculate(dice1, dice2, dice3, dice4, dice5);
             }
         }
         {
