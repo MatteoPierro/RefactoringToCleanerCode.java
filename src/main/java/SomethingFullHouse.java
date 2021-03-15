@@ -1,10 +1,10 @@
-public class SomethingFullHouse {
+public class SomethingFullHouse implements Something {
 
-    boolean is(ScoringType st) {
+    public boolean is(ScoringType st) {
         return st == ScoringType.FullHouse;
     }
 
-    int calculate(int dice1, int dice2, int dice3, int dice4, int dice5) {
+    public int calculate(int dice1, int dice2, int dice3, int dice4, int dice5) {
         int[] tallies;
         var _2 = false;
         int i;
