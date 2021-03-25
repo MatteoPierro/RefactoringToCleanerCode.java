@@ -1,5 +1,3 @@
-package t;
-
 public class Roll {
     private final int dice1;
     private final int dice2;

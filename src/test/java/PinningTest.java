@@ -1,6 +1,5 @@
 import org.approvaltests.combinations.CombinationApprovals;
 import org.junit.Test;
-import t.Roll;
 
 public class PinningTest {
 

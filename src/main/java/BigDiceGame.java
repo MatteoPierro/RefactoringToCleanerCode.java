@@ -1,5 +1,3 @@
-import t.Roll;
-
 import java.util.stream.Stream;
 
 public class BigDiceGame {

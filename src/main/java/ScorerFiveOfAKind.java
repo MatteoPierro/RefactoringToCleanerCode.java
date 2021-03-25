@@ -1,5 +1,3 @@
-import t.Roll;
-
 public class ScorerFiveOfAKind implements Scorer {
 
     public boolean canCalculate(ScoringType st) {

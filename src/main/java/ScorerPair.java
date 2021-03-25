@@ -1,5 +1,3 @@
-import t.Roll;
-
 public class ScorerPair implements Scorer {
 
     @Override

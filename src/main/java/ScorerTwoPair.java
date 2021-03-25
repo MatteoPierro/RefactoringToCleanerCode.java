@@ -1,5 +1,3 @@
-import t.Roll;
-
 public class ScorerTwoPair implements Scorer {
 
     public boolean canCalculate(ScoringType st) {
