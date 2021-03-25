@@ -11,7 +11,7 @@ public class ScorerFullHouse implements Scorer {
         var _2_at = 0;
         var _3 = false;
         var _3_at = 0;
-        
+
         tallies = roll.tally();
 
         for (i = 0; i != 6; i += 1) {
