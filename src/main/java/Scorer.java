@@ -1,5 +1,5 @@
 public interface Scorer {
-    boolean is(ScoringType st);
+    boolean canCalculate(ScoringType st);
 
     int calculate(int dice1, int dice2, int dice3, int dice4, int dice5);
 }

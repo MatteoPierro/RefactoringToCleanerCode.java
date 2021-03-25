@@ -1,6 +1,6 @@
 public class ScorerFullHouse implements Scorer {
 
-    public boolean is(ScoringType st) {
+    public boolean canCalculate(ScoringType st) {
         return st == ScoringType.FullHouse;
     }
 
