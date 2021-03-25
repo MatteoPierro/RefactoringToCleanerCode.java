@@ -36,4 +36,13 @@ public class Roll {
     int[] dice() {
         return new int[]{getDie1(), getDie2(), getDie3(), getDie4(), getDie5()};
     }
+
+    int[] tally() {
+        int[] tally = new int[6];
+
+        for (int die : dice()) {
+            tally[die - 1]++;
+        }
+        return tally;
+    }
 }

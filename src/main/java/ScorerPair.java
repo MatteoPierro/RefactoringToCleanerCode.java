@@ -7,7 +7,7 @@ public class ScorerPair implements Scorer {
 
     @Override
     public int calculate(Roll roll) {
-        int[] tally = tally(roll);
+        int[] tally = roll.tally();
 
         return calculateScore(tally);
     }
@@ -24,15 +24,6 @@ public class ScorerPair implements Scorer {
 
     private boolean isPair(int faceOccurrences) {
         return faceOccurrences >= 2;
-    }
-
-    private int[] tally(Roll roll) {
-        int[] tally = new int[6];
-
-        for (int die : roll.dice()) {
-            tally[die - 1]++;
-        }
-        return tally;
     }
 
 }
