@@ -6,11 +6,11 @@ public class ScorerTwoPair implements Scorer {
 
     public int calculate(Roll roll) {
         var counts1 = new int[6];
-        counts1[roll.getDice1() - 1]++;
-        counts1[roll.getDice2() - 1]++;
-        counts1[roll.getDice3() - 1]++;
-        counts1[roll.getDice4() - 1]++;
-        counts1[roll.getDice5() - 1]++;
+        counts1[roll.getDie1() - 1]++;
+        counts1[roll.getDie2() - 1]++;
+        counts1[roll.getDie3() - 1]++;
+        counts1[roll.getDie4() - 1]++;
+        counts1[roll.getDie5() - 1]++;
         var n = 0;
         var score = 0;
         for (var i = 0; i < 6; i += 1) {

@@ -14,11 +14,11 @@ public class ScorerFullHouse implements Scorer {
 
 
         tallies = new int[6];
-        tallies[roll.getDice1() - 1] += 1;
-        tallies[roll.getDice2() - 1] += 1;
-        tallies[roll.getDice3() - 1] += 1;
-        tallies[roll.getDice4() - 1] += 1;
-        tallies[roll.getDice5() - 1] += 1;
+        tallies[roll.getDie1() - 1] += 1;
+        tallies[roll.getDie2() - 1] += 1;
+        tallies[roll.getDie3() - 1] += 1;
+        tallies[roll.getDie4() - 1] += 1;
+        tallies[roll.getDie5() - 1] += 1;
 
         for (i = 0; i != 6; i += 1) {
             if (tallies[i] == 2) {
