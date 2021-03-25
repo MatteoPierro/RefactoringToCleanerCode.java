@@ -10,13 +10,9 @@ public class ScorerPair implements Scorer {
         int value = 2;
         int[] tally = new int[6];
 
-        for (int die: new int[]{roll.getDie1()}) {
+        for (int die: new int[]{roll.getDie1(), roll.getDie2(), roll.getDie3(), roll.getDie4(), roll.getDie5()}) {
             tally[die - 1]++;
         }
-        tally[roll.getDie2() - 1]++;
-        tally[roll.getDie3() - 1]++;
-        tally[roll.getDie4() - 1]++;
-        tally[roll.getDie5() - 1]++;
 
         for (var i = 6 - 1; i >= 0; i--) {
             if (tally[i] >= value) {
