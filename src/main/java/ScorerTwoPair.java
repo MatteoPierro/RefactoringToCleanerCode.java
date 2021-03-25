@@ -8,10 +8,11 @@ public class ScorerTwoPair implements Scorer {
         var tally = roll.tally();
         var numberOfPairsFound = 0;
         var score = 0;
-        for (var i = 0; i < 6; i += 1) {
-            if (tally[6 - i - 1] >= 2) {
+
+        for (var face = 6; face >= 1; face--) {
+            if (isPair(tally[face - 1])) {
                 numberOfPairsFound++;
-                score += (6 - i)  * 2;
+                score += face * 2;
             }
         }
 
@@ -20,5 +21,9 @@ public class ScorerTwoPair implements Scorer {
         }
 
         return 0;
+    }
+
+    private boolean isPair(int faceOccurrences) {
+        return faceOccurrences >= 2;
     }
 }
