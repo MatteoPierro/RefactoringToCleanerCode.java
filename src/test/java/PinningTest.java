@@ -1,5 +1,6 @@
 import org.approvaltests.combinations.CombinationApprovals;
 import org.junit.Test;
+import t.Roll;
 
 public class PinningTest {
 
@@ -9,7 +10,7 @@ public class PinningTest {
         ScoringType[] scoringTypes = ScoringType.values();
 
         CombinationApprovals.verifyAllCombinations(
-                BigDiceGame::CalculateScore,
+                (scoringType, dice1, dice2, dice3, dice4, dice5) -> BigDiceGame.CalculateScore(scoringType, new Roll(dice1, dice2, dice3, dice4, dice5)),
                 scoringTypes,
                 dice,
                 dice,
