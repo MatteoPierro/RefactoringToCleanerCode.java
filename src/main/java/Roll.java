@@ -32,4 +32,8 @@ public class Roll {
     public int getDie5() {
         return die5;
     }
+
+    int[] dice() {
+        return new int[]{getDie1(), getDie2(), getDie3(), getDie4(), getDie5()};
+    }
 }

@@ -10,7 +10,7 @@ public class ScorerPair implements Scorer {
         int value = 2;
         int[] tally = new int[6];
 
-        for (int die: new int[]{roll.getDie1(), roll.getDie2(), roll.getDie3(), roll.getDie4(), roll.getDie5()}) {
+        for (int die: roll.dice()) {
             tally[die - 1]++;
         }
 
@@ -22,4 +22,5 @@ public class ScorerPair implements Scorer {
 
         return 0;
     }
+
 }
