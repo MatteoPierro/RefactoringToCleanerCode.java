@@ -8,8 +8,7 @@ public class ScorerPair implements Scorer {
     @Override
     public int calculate(Roll roll) {
         int value = 2;
-        int[] tally;
-        tally = new int[6];
+        int[] tally = new int[6];
         tally[roll.getDie1() - 1]++;
         tally[roll.getDie2() - 1]++;
         tally[roll.getDie3() - 1]++;
