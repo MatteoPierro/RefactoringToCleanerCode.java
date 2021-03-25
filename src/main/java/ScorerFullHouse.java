@@ -11,14 +11,8 @@ public class ScorerFullHouse implements Scorer {
         var _2_at = 0;
         var _3 = false;
         var _3_at = 0;
-
-
-        tallies = new int[6];
-        tallies[roll.getDie1() - 1] += 1;
-        tallies[roll.getDie2() - 1] += 1;
-        tallies[roll.getDie3() - 1] += 1;
-        tallies[roll.getDie4() - 1] += 1;
-        tallies[roll.getDie5() - 1] += 1;
+        
+        tallies = roll.tally();
 
         for (i = 0; i != 6; i += 1) {
             if (tallies[i] == 2) {
