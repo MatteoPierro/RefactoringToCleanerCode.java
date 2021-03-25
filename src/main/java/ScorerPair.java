@@ -9,9 +9,9 @@ public class ScorerPair implements Scorer {
     public int calculate(Roll roll) {
         int[] tally = tally(roll);
 
-        for (var i = 6 - 1; i >= 0; i--) {
-            if (tally[i] >= 2) {
-                return (i + 1) * 2;
+        for (var face = 6 - 1; face >= 0; face--) {
+            if (tally[face] >= 2) {
+                return (face + 1) * 2;
             }
         }
 
