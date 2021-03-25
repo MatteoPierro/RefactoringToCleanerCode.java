@@ -9,7 +9,7 @@ public class PinningTest {
         ScoringType[] scoringTypes = ScoringType.values();
 
         CombinationApprovals.verifyAllCombinations(
-                (scoringType, dice1, dice2, dice3, dice4, dice5) -> BigDiceGame.CalculateScore(scoringType, new BigDiceGame.Roll(dice1, dice2, dice3, dice4, dice5)),
+                BigDiceGame::CalculateScore,
                 scoringTypes,
                 dice,
                 dice,
