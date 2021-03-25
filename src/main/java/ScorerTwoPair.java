@@ -11,12 +11,12 @@ public class ScorerTwoPair implements Scorer {
         for (var i = 0; i < 6; i += 1) {
             if (tally[6 - i - 1] >= 2) {
                 numberOfPairsFound++;
-                score += 6 - i;
+                score += (6 - i)  * 2;
             }
         }
 
         if (numberOfPairsFound == 2) {
-            return score * 2;
+            return score;
         }
 
         return 0;
