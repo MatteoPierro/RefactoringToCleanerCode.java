@@ -7,12 +7,11 @@ public class ScorerPair implements Scorer {
 
     @Override
     public int calculate(Roll roll) {
-        int value = 2;
         int[] tally = tally(roll);
 
         for (var i = 6 - 1; i >= 0; i--) {
-            if (tally[i] >= value) {
-                return (i + 1) * value;
+            if (tally[i] >= 2) {
+                return (i + 1) * 2;
             }
         }
 
