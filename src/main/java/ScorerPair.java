@@ -10,7 +10,7 @@ public class ScorerPair implements Scorer {
         int[] tally = tally(roll);
 
         for (var face = 6; face >= 1; face--) {
-            if (tally[face - 1] >= 2) {
+            if (isPair(tally[face - 1])) {
                 return face * 2;
             }
         }
@@ -18,10 +18,14 @@ public class ScorerPair implements Scorer {
         return 0;
     }
 
+    private boolean isPair(int faceOccurrences) {
+        return faceOccurrences >= 2;
+    }
+
     private int[] tally(Roll roll) {
         int[] tally = new int[6];
 
-        for (int die: roll.dice()) {
+        for (int die : roll.dice()) {
             tally[die - 1]++;
         }
         return tally;
