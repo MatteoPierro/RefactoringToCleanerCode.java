@@ -1,11 +1,13 @@
+import t.Roll;
+
 public class ScorerFiveOfAKind implements Scorer {
 
     public boolean canCalculate(ScoringType st) {
         return st == ScoringType.FiveOfAKind;
     }
 
-    public int calculate(int dice1, int dice2, int dice3, int dice4, int dice5) {
-        int[] dices = {dice1, dice2, dice3, dice4, dice5};
+    public int calculate(Roll roll) {
+        int[] dices = {roll.getDice1(), roll.getDice2(), roll.getDice3(), roll.getDice4(), roll.getDice5()};
         var counts2 = new int[6];
         for (int die : dices) {
             counts2[die - 1]++;

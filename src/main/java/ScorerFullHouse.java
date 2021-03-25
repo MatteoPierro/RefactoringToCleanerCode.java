@@ -1,10 +1,12 @@
+import t.Roll;
+
 public class ScorerFullHouse implements Scorer {
 
     public boolean canCalculate(ScoringType st) {
         return st == ScoringType.FullHouse;
     }
 
-    public int calculate(int dice1, int dice2, int dice3, int dice4, int dice5) {
+    public int calculate(Roll roll) {
         int[] tallies;
         var _2 = false;
         int i;
@@ -14,11 +16,11 @@ public class ScorerFullHouse implements Scorer {
 
 
         tallies = new int[6];
-        tallies[dice1 - 1] += 1;
-        tallies[dice2 - 1] += 1;
-        tallies[dice3 - 1] += 1;
-        tallies[dice4 - 1] += 1;
-        tallies[dice5 - 1] += 1;
+        tallies[roll.getDice1() - 1] += 1;
+        tallies[roll.getDice2() - 1] += 1;
+        tallies[roll.getDice3() - 1] += 1;
+        tallies[roll.getDice4() - 1] += 1;
+        tallies[roll.getDice5() - 1] += 1;
 
         for (i = 0; i != 6; i += 1) {
             if (tallies[i] == 2) {

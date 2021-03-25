@@ -1,3 +1,5 @@
+import t.Roll;
+
 public class ScorerPair implements Scorer {
 
     @Override
@@ -6,15 +8,15 @@ public class ScorerPair implements Scorer {
     }
 
     @Override
-    public int calculate(int dice1, int dice2, int dice3, int dice4, int dice5) {
+    public int calculate(Roll roll) {
         int value = 2;
         int[] tallies1;
         tallies1 = new int[6];
-        tallies1[dice1 - 1]++;
-        tallies1[dice2 - 1]++;
-        tallies1[dice3 - 1]++;
-        tallies1[dice4 - 1]++;
-        tallies1[dice5 - 1]++;
+        tallies1[roll.getDice1() - 1]++;
+        tallies1[roll.getDice2() - 1]++;
+        tallies1[roll.getDice3() - 1]++;
+        tallies1[roll.getDice4() - 1]++;
+        tallies1[roll.getDice5() - 1]++;
         for (var i = 6 - 1; i >= 0; i--) {
             if (tallies1[i] >= value) {
                 return (i + 1) * value;

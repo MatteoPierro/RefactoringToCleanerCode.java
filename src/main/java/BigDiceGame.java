@@ -1,3 +1,5 @@
+import t.Roll;
+
 import java.util.stream.Stream;
 
 public class BigDiceGame {
@@ -7,7 +9,7 @@ public class BigDiceGame {
         return Stream.of(SCORERS)
                 .filter(scorer -> scorer.canCalculate(scoringType))
                 .findFirst()
-                    .map(scorer -> scorer.calculate(dice1, dice2, dice3, dice4, dice5))
+                    .map(scorer -> scorer.calculate(new Roll(dice1, dice2, dice3, dice4, dice5)))
                 .orElse(0);
 
     }
