@@ -1,7 +1,7 @@
 public class ScorerFiveOfAKind implements Scorer {
 
-    public boolean canCalculate(ScoringType st) {
-        return st == ScoringType.FiveOfAKind;
+    public boolean canCalculate(ScoringType scoringType) {
+        return scoringType == ScoringType.FiveOfAKind;
     }
 
     public int calculate(Roll roll) {

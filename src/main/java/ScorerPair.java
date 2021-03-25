@@ -1,8 +1,8 @@
 public class ScorerPair implements Scorer {
 
     @Override
-    public boolean canCalculate(ScoringType st) {
-        return st == ScoringType.Pair;
+    public boolean canCalculate(ScoringType scoringType) {
+        return scoringType == ScoringType.Pair;
     }
 
     @Override

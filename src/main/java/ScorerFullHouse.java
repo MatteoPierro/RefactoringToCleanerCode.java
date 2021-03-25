@@ -1,7 +1,7 @@
 public class ScorerFullHouse implements Scorer {
 
-    public boolean canCalculate(ScoringType st) {
-        return st == ScoringType.FullHouse;
+    public boolean canCalculate(ScoringType scoringType) {
+        return scoringType == ScoringType.FullHouse;
     }
 
     public int calculate(Roll roll) {

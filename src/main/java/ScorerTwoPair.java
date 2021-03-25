@@ -1,7 +1,7 @@
 public class ScorerTwoPair implements Scorer {
 
-    public boolean canCalculate(ScoringType st) {
-        return st == ScoringType.TwoPair;
+    public boolean canCalculate(ScoringType scoringType) {
+        return scoringType == ScoringType.TwoPair;
     }
 
     public int calculate(Roll roll) {

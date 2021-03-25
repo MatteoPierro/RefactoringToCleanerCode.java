@@ -1,5 +1,5 @@
 public interface Scorer {
-    boolean canCalculate(ScoringType st);
+    boolean canCalculate(ScoringType scoringType);
 
     int calculate(Roll roll);
 }
