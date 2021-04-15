@@ -5,10 +5,14 @@ public class ScorerFiveOfAKind implements Scorer {
     }
 
     public int calculate(Roll roll) {
-        var counts2 = roll.tally();
+        var tally = roll.tally();
 
+        return calculateScore(tally);
+    }
+
+    private int calculateScore(int[] tally) {
         for (var i1 = 0; i1 != 6; i1++) {
-            if (counts2[i1] == 5) {
+            if (tally[i1] == 5) {
                 final int bigScore = 50;
                 return bigScore;
             }
