@@ -6,6 +6,11 @@ public class ScorerTwoPair implements Scorer {
 
     public int calculate(Roll roll) {
         var tally = roll.tally();
+
+        return calculateScore(tally);
+    }
+
+    private int calculateScore(int[] tally) {
         var numberOfPairsFound = 0;
         var score = 0;
 
