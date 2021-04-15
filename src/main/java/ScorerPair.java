@@ -7,7 +7,7 @@ public class ScorerPair implements Scorer {
 
     @Override
     public int calculate(Roll roll) {
-        int[] tally = roll.tally();
+        var tally = roll.tally();
 
         return calculateScore(tally);
     }
