@@ -5,14 +5,14 @@ public class ScorerFullHouse implements Scorer {
     }
 
     public int calculate(Roll roll) {
-        int[] tallies;
+        int[] tallies = roll.tally();
+
         var _2 = false;
         int i;
         var _2_at = 0;
         var _3 = false;
         var _3_at = 0;
 
-        tallies = roll.tally();
 
         for (i = 0; i != 6; i += 1) {
             if (tallies[i] == 2) {
