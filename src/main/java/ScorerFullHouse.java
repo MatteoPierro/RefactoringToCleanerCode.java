@@ -5,9 +5,9 @@ public class ScorerFullHouse implements Scorer {
     }
 
     public int calculate(Roll roll) {
-        int[] tallies = roll.tally();
+        var tally = roll.tally();
 
-        return calculateScore(tallies);
+        return calculateScore(tally);
     }
 
     private int calculateScore(int[] tallies) {
