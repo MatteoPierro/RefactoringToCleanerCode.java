@@ -7,6 +7,10 @@ public class ScorerFullHouse implements Scorer {
     public int calculate(Roll roll) {
         int[] tallies = roll.tally();
 
+        return calculateScore(tallies);
+    }
+
+    private int calculateScore(int[] tallies) {
         var _2 = false;
         int i;
         var _2_at = 0;
