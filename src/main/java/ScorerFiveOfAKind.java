@@ -13,8 +13,8 @@ public class ScorerFiveOfAKind implements Scorer {
     }
 
     private int calculateScore(int[] tally) {
-        for (var face = 0; face != 6; face++) {
-            if (tally[face] == 5) {
+        for (var face = 1; face <= 6; face++) {
+            if (tally[face - 1] == 5) {
                 return FIVE_OF_A_KIND_SCORE;
             }
         }
