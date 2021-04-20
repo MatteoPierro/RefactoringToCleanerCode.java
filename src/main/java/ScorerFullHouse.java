@@ -23,10 +23,10 @@ public class ScorerFullHouse implements Scorer {
             }
         }
 
-        for (var i = 0; i != 6; i += 1) {
-            if (tallies[i] == 3) {
+        for (var face = 1; face <= 6; face += 1) {
+            if (tallies[face - 1] == 3) {
                 foundThreeOfAKind = true;
-                threeOfAKindFace = i + 1;
+                threeOfAKindFace = face;
             }
         }
 
