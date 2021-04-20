@@ -12,7 +12,6 @@ public class ScorerFullHouse implements Scorer {
 
     private int calculateScore(int[] tallies) {
         var pairFace = 0;
-        var foundThreeOfAKind = false;
         var threeOfAKindFace = 0;
 
         for (var face = 1; face <= 6; face += 1) {
@@ -20,16 +19,19 @@ public class ScorerFullHouse implements Scorer {
                 pairFace = face;
             }
             if (tallies[face - 1] == 3) {
-                foundThreeOfAKind = true;
                 threeOfAKindFace = face;
             }
         }
 
-        if (isPairFound(pairFace) && foundThreeOfAKind) {
+        if (isPairFound(pairFace) && isThreeOfAKindFound(threeOfAKindFace)) {
             return pairFace * 2 + threeOfAKindFace * 3;
         }
 
         return 0;
+    }
+
+    private boolean isThreeOfAKindFound(int threeOfAKindFace) {
+        return threeOfAKindFace != 0;
     }
 
     private boolean isPairFound(int pairFace) {
