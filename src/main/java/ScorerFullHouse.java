@@ -21,9 +21,6 @@ public class ScorerFullHouse implements Scorer {
                 foundPair = true;
                 pairFace = face;
             }
-        }
-
-        for (var face = 1; face <= 6; face += 1) {
             if (tallies[face - 1] == 3) {
                 foundThreeOfAKind = true;
                 threeOfAKindFace = face;
