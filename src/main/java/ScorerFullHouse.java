@@ -12,26 +12,26 @@ public class ScorerFullHouse implements Scorer {
 
     private int calculateScore(int[] tallies) {
         var foundPair = false;
-        var _2_at = 0;
+        var pairFace = 0;
         var foundThreeOfAKind = false;
-        var _3_at = 0;
+        var threeOfAKindFace = 0;
 
         for (var i = 0; i != 6; i += 1) {
             if (tallies[i] == 2) {
                 foundPair = true;
-                _2_at = i + 1;
+                pairFace = i + 1;
             }
         }
 
         for (var i = 0; i != 6; i += 1) {
             if (tallies[i] == 3) {
                 foundThreeOfAKind = true;
-                _3_at = i + 1;
+                threeOfAKindFace = i + 1;
             }
         }
 
         if (foundPair && foundThreeOfAKind) {
-            return _2_at * 2 + _3_at * 3;
+            return pairFace * 2 + threeOfAKindFace * 3;
         }
 
         return 0;
