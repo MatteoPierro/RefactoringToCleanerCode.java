@@ -25,10 +25,14 @@ public class ScorerFullHouse implements Scorer {
             }
         }
 
-        if (pairFace != 0 && foundThreeOfAKind) {
+        if (isPairFound(pairFace) && foundThreeOfAKind) {
             return pairFace * 2 + threeOfAKindFace * 3;
         }
 
         return 0;
+    }
+
+    private boolean isPairFound(int pairFace) {
+        return pairFace != 0;
     }
 }
