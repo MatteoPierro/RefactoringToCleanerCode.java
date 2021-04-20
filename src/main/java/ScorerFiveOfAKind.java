@@ -1,6 +1,6 @@
 public class ScorerFiveOfAKind implements Scorer {
 
-    public static final int BIG_SCORE = 50;
+    public static final int FIVE_OF_A_KIND_SCORE = 50;
 
     public boolean canCalculate(ScoringType scoringType) {
         return scoringType == ScoringType.FiveOfAKind;
@@ -15,7 +15,7 @@ public class ScorerFiveOfAKind implements Scorer {
     private int calculateScore(int[] tally) {
         for (var i1 = 0; i1 != 6; i1++) {
             if (tally[i1] == 5) {
-                return BIG_SCORE;
+                return FIVE_OF_A_KIND_SCORE;
             }
         }
 
