@@ -19,7 +19,7 @@ public class BigDiceGame {
             }
         }
         {
-            FiveOfAKindScoreCalculator calculator = new FiveOfAKindScoreCalculator();
+            ScoreCalculator calculator = new FiveOfAKindScoreCalculator();
             if (calculator.isSomething(scoringType)) {
                 return calculator.calculateScore(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
             }
