@@ -2,7 +2,7 @@ public class BigDiceGame {
     public static int CalculateScore(ScoringType st, int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
         switch (st) {
             case Pair: {
-                return foo(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
+                return somethingForPair(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
             }
 
             case TwoPair: {
@@ -97,7 +97,7 @@ public class BigDiceGame {
         return 0;
     }
 
-    private static int foo(int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
+    private static int somethingForPair(int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
         int value = 2;
         int[] tallies1;
         tallies1 = new int[6];
