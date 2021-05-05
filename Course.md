@@ -26,7 +26,7 @@ We are looking at large method that we don't understand, and we want to clean up
     4. Fix or revert and try again
     5. Commit
 
-- [ ] ## Activity 2: Move methods onto new classes
+- [x] ## Activity 2: Move methods onto new classes
 
     1. Pick a method
     2. Move into a better class
