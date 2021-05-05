@@ -14,7 +14,7 @@ public class BigDiceGame {
             }
 
             case FiveOfAKind: {
-                return FiveOfAKindScoreCalculator.calculateScoreForFiveOfAKind(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
+                return FiveOfAKindScoreCalculator.calculateScore(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
             }
         }
 
