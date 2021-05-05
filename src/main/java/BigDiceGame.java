@@ -2,26 +2,26 @@ public class BigDiceGame {
     public static int CalculateScore(ScoringType st, int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
         switch (st) {
             case Pair: {
-                return somethingForPair(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
+                return calculateScoreForPair(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
             }
 
             case TwoPair: {
-                return somethingForTwoPair(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
+                return calculateScoreForTwoPair(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
             }
 
             case FullHouse: {
-                return somethingForFullHouse(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
+                return calculateScoreForFullHouse(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
             }
 
             case FiveOfAKind: {
-                return somethingForFiveOfAKind(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
+                return calculateScoreForFiveOfAKind(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
             }
         }
 
         return 0;
     }
 
-    private static int somethingForFiveOfAKind(int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
+    private static int calculateScoreForFiveOfAKind(int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
         int[] dice1 = {firstDie, secondDie, thirdDie, fourthDie, fifthDie};
         var counts2 = new int[6];
         for (int die : dice1) {
@@ -37,7 +37,7 @@ public class BigDiceGame {
         return 0;
     }
 
-    private static int somethingForFullHouse(int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
+    private static int calculateScoreForFullHouse(int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
         int[] tallies;
         var _2 = false;
         int i;
@@ -74,7 +74,7 @@ public class BigDiceGame {
         return 0;
     }
 
-    private static int somethingForTwoPair(int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
+    private static int calculateScoreForTwoPair(int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
         var counts1 = new int[6];
         counts1[firstDie - 1]++;
         counts1[secondDie - 1]++;
@@ -97,7 +97,7 @@ public class BigDiceGame {
         return 0;
     }
 
-    private static int somethingForPair(int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
+    private static int calculateScoreForPair(int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
         int value = 2;
         int[] tallies1;
         tallies1 = new int[6];
