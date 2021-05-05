@@ -21,4 +21,8 @@ public class TwoPairScoreCalculator {
 
         return 0;
     }
+
+    static boolean isTwoPair(ScoringType scoringType) {
+        return scoringType == ScoringType.TwoPair;
+    }
 }
