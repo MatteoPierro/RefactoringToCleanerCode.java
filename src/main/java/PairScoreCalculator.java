@@ -19,7 +19,7 @@ public class PairScoreCalculator implements ScoreCalculator {
     }
 
     @Override
-    public boolean isSomething(ScoringType scoringType) {
+    public boolean canBeAppliedFor(ScoringType scoringType) {
         return scoringType == ScoringType.Pair;
     }
 }

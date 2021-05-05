@@ -36,7 +36,7 @@ public class FullHouseScoreCalculator implements ScoreCalculator {
         return 0;
     }
 
-    public boolean isSomething(ScoringType scoringType) {
+    public boolean canBeAppliedFor(ScoringType scoringType) {
         return scoringType == ScoringType.FullHouse;
     }
 }
