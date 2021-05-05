@@ -1,15 +1,15 @@
 public class BigDiceGame {
-    public static int CalculateScore(ScoringType st, int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
-        if (st == ScoringType.Pair) {
+    public static int CalculateScore(ScoringType scoringType, int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
+        if (scoringType == ScoringType.Pair) {
             return PairScoreCalculator.calculateScore(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
         }
-        if (st == ScoringType.TwoPair) {
+        if (scoringType == ScoringType.TwoPair) {
             return TwoPairScoreCalculator.calculateScore(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
         }
-        if (st == ScoringType.FullHouse) {
+        if (scoringType == ScoringType.FullHouse) {
             return FullHouseScoreCalculator.calculateScore(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
         }
-        if (st == ScoringType.FiveOfAKind) {
+        if (scoringType == ScoringType.FiveOfAKind) {
             return FiveOfAKindScoreCalculator.calculateScore(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
         }
 
