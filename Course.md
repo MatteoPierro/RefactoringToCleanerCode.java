@@ -18,7 +18,7 @@ We are looking at large method that we don't understand, and we want to clean up
 3. Evaluate
 4. Commit (or revert)
 
-- [ ] ## Activity 1: Extract Paragraphs to methods
+- [x] ## Activity 1: Extract Paragraphs to methods
 
     1. Identify a paragraph (`case`)
     2. Extract a method to a Obvious Nonsense name
