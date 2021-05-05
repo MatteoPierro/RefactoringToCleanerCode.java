@@ -22,7 +22,7 @@ public class TwoPairScoreCalculator {
         return 0;
     }
 
-    static boolean isTwoPair(ScoringType scoringType) {
+    static boolean isSomething(ScoringType scoringType) {
         return scoringType == ScoringType.TwoPair;
     }
 }
