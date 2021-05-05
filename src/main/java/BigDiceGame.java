@@ -14,14 +14,14 @@ public class BigDiceGame {
             }
 
             case FiveOfAKind: {
-                return some(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
+                return somethingForFiveOfAKind(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
             }
         }
 
         return 0;
     }
 
-    private static int some(int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
+    private static int somethingForFiveOfAKind(int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
         int[] dice1 = {firstDie, secondDie, thirdDie, fourthDie, fifthDie};
         var counts2 = new int[6];
         for (int die : dice1) {
