@@ -33,7 +33,7 @@ We are looking at large method that we don't understand, and we want to clean up
     3. Evaluate at caller
     4. Commit (or revert)
 
-- [ ] ## Activity 3: Clean up the main method
+- [x] ## Activity 3: Clean up the main method
 
     1. Convert `switch` to `if`/`else`, commit
     2. Remove redundant `else` in method, commit
