@@ -1,7 +1,6 @@
 public class BigDiceGame {
     public static int CalculateScore(ScoringType scoringType, int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
-        {
-            ScoreCalculator calculator = new PairScoreCalculator();
+        for (ScoreCalculator calculator : new ScoreCalculator[]{ new PairScoreCalculator() }) {
             if (calculator.isSomething(scoringType)) {
                 return calculator.calculateScore(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
             }
