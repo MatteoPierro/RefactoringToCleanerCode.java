@@ -19,8 +19,9 @@ public class BigDiceGame {
             }
         }
         {
-            if (FiveOfAKindScoreCalculator.isSomething(scoringType)) {
-                return FiveOfAKindScoreCalculator.calculateScore(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
+            FiveOfAKindScoreCalculator calculator = new FiveOfAKindScoreCalculator();
+            if (calculator.isSomething(scoringType)) {
+                return calculator.calculateScore(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
             }
         }
 

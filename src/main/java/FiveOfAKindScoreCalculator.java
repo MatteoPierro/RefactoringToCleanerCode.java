@@ -1,5 +1,5 @@
 public class FiveOfAKindScoreCalculator {
-    static int calculateScore(int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
+    int calculateScore(int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
         int[] dice1 = {firstDie, secondDie, thirdDie, fourthDie, fifthDie};
         var counts2 = new int[6];
         for (int die : dice1) {
@@ -15,7 +15,7 @@ public class FiveOfAKindScoreCalculator {
         return 0;
     }
 
-    static boolean isSomething(ScoringType scoringType) {
+    boolean isSomething(ScoringType scoringType) {
         return scoringType == ScoringType.FiveOfAKind;
     }
 }
