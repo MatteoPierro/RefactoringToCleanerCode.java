@@ -1,6 +1,5 @@
 public class BigDiceGame {
     public static int CalculateScore(ScoringType st, int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
-        int bigScore = 50;
         switch (st) {
             case Pair: {
                 return foo(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
@@ -23,7 +22,7 @@ public class BigDiceGame {
 
                 for (var i1 = 0; i1 != 6; i1++) {
                     if (counts2[i1] == 5) {
-                        return bigScore;
+                        return 50;
                     }
                 }
 
