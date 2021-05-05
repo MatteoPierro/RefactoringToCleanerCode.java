@@ -1,5 +1,5 @@
 public class FullHouseScoreCalculator {
-    static int calculateScoreForFullHouse(int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
+    static int calculateScore(int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
         int[] tallies;
         var _2 = false;
         int i;

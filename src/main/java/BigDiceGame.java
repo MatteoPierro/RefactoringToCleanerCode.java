@@ -10,7 +10,7 @@ public class BigDiceGame {
             }
 
             case FullHouse: {
-                return FullHouseScoreCalculator.calculateScoreForFullHouse(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
+                return FullHouseScoreCalculator.calculateScore(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
             }
 
             case FiveOfAKind: {
