@@ -1,5 +1,5 @@
 public class FullHouseScoreCalculator {
-    static int calculateScore(int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
+    int calculateScore(int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
         int[] tallies;
         var _2 = false;
         int i;
@@ -36,7 +36,7 @@ public class FullHouseScoreCalculator {
         return 0;
     }
 
-    static boolean isSomething(ScoringType scoringType) {
+    boolean isSomething(ScoringType scoringType) {
         return scoringType == ScoringType.FullHouse;
     }
 }

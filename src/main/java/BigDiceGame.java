@@ -13,8 +13,9 @@ public class BigDiceGame {
             }
         }
         {
-            if (FullHouseScoreCalculator.isSomething(scoringType)) {
-                return FullHouseScoreCalculator.calculateScore(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
+            FullHouseScoreCalculator calculator = new FullHouseScoreCalculator();
+            if (calculator.isSomething(scoringType)) {
+                return calculator.calculateScore(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
             }
         }
         {
