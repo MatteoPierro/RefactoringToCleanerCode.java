@@ -7,8 +7,9 @@ public class BigDiceGame {
             }
         }
         {
-            if (TwoPairScoreCalculator.isSomething(scoringType)) {
-                return TwoPairScoreCalculator.calculateScore(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
+            TwoPairScoreCalculator calculator = new TwoPairScoreCalculator();
+            if (calculator.isSomething(scoringType)) {
+                return calculator.calculateScore(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
             }
         }
         {

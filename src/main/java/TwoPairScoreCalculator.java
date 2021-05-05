@@ -1,5 +1,5 @@
 public class TwoPairScoreCalculator {
-    static int calculateScore(int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
+    int calculateScore(int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
         var counts1 = new int[6];
         counts1[firstDie - 1]++;
         counts1[secondDie - 1]++;
@@ -22,7 +22,7 @@ public class TwoPairScoreCalculator {
         return 0;
     }
 
-    static boolean isSomething(ScoringType scoringType) {
+    boolean isSomething(ScoringType scoringType) {
         return scoringType == ScoringType.TwoPair;
     }
 }
