@@ -6,7 +6,7 @@ public class BigDiceGame {
             }
 
             case TwoPair: {
-                return TwoPairScoreCalculator.calculateScoreForTwoPair(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
+                return TwoPairScoreCalculator.calculateScore(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
             }
 
             case FullHouse: {

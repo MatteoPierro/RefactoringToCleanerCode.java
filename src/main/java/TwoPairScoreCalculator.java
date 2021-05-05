@@ -1,5 +1,5 @@
 public class TwoPairScoreCalculator {
-    static int calculateScoreForTwoPair(int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
+    static int calculateScore(int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
         var counts1 = new int[6];
         counts1[firstDie - 1]++;
         counts1[secondDie - 1]++;
