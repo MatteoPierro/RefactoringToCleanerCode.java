@@ -1,8 +1,9 @@
 public class BigDiceGame {
     public static int CalculateScore(ScoringType scoringType, int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
         {
-            if (new PairScoreCalculator().isSomething(scoringType)) {
-                return new PairScoreCalculator().calculateScore(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
+            PairScoreCalculator calculator = new PairScoreCalculator();
+            if (calculator.isSomething(scoringType)) {
+                return calculator.calculateScore(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
             }
         }
         {
