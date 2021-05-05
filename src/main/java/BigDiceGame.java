@@ -6,7 +6,7 @@ public class BigDiceGame {
             }
 
             case TwoPair: {
-                return bar(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
+                return somethingForTwoPair(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
             }
 
             case FullHouse: {
@@ -74,7 +74,7 @@ public class BigDiceGame {
         return 0;
     }
 
-    private static int bar(int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
+    private static int somethingForTwoPair(int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
         var counts1 = new int[6];
         counts1[firstDie - 1]++;
         counts1[secondDie - 1]++;
