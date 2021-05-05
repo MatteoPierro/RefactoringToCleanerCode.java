@@ -2,7 +2,7 @@ public class BigDiceGame {
     public static int CalculateScore(ScoringType st, int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
         switch (st) {
             case Pair: {
-                return SomethingPair.calculateScore(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
+                return PairScoreCalculator.calculateScore(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
             }
 
             case TwoPair: {

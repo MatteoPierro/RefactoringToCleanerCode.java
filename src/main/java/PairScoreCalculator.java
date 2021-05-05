@@ -1,4 +1,4 @@
-public class SomethingPair {
+public class PairScoreCalculator {
     static int calculateScore(int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
         int value = 2;
         int[] tallies1;
