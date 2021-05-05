@@ -1,5 +1,5 @@
 public class SomethingPair {
-    static int calculateScoreForPair(int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
+    static int calculateScore(int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
         int value = 2;
         int[] tallies1;
         tallies1 = new int[6];
