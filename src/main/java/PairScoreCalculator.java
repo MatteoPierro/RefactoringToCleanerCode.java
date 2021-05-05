@@ -1,5 +1,6 @@
-public class PairScoreCalculator {
-    int calculateScore(int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
+public class PairScoreCalculator implements ScoreCalculator {
+    @Override
+    public int calculateScore(int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
         int value = 2;
         int[] tallies1;
         tallies1 = new int[6];
@@ -17,7 +18,8 @@ public class PairScoreCalculator {
         return 0;
     }
 
-    boolean isSomething(ScoringType scoringType) {
+    @Override
+    public boolean isSomething(ScoringType scoringType) {
         return scoringType == ScoringType.Pair;
     }
 }
