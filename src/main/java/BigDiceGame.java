@@ -1,12 +1,12 @@
 public class BigDiceGame {
-    public static int CalculateScore(ScoringType st, int die1, int dieTwo, int d3, int dice4, int fifthDie) {
+    public static int CalculateScore(ScoringType st, int firstDie, int dieTwo, int d3, int dice4, int fifthDie) {
         int bigScore = 50;
         switch (st) {
             case Pair: {
                 int value = 2;
                 int[] tallies1;
                 tallies1 = new int[6];
-                tallies1[die1 - 1]++;
+                tallies1[firstDie - 1]++;
                 tallies1[dieTwo - 1]++;
                 tallies1[d3 - 1]++;
                 tallies1[dice4 - 1]++;
@@ -22,7 +22,7 @@ public class BigDiceGame {
 
             case TwoPair: {
                 var counts1 = new int[6];
-                counts1[die1 - 1]++;
+                counts1[firstDie - 1]++;
                 counts1[dieTwo - 1]++;
                 counts1[d3 - 1]++;
                 counts1[dice4 - 1]++;
@@ -53,7 +53,7 @@ public class BigDiceGame {
 
 
                 tallies = new int[6];
-                tallies[die1 - 1] += 1;
+                tallies[firstDie - 1] += 1;
                 tallies[dieTwo - 1] += 1;
                 tallies[d3 - 1] += 1;
                 tallies[dice4 - 1] += 1;
@@ -81,7 +81,7 @@ public class BigDiceGame {
             }
 
             case FiveOfAKind: {
-                int[] dice1 = {die1, dieTwo, d3, dice4, fifthDie};
+                int[] dice1 = {firstDie, dieTwo, d3, dice4, fifthDie};
                 var counts2 = new int[6];
                 for (int die : dice1) {
                     counts2[die - 1]++;
