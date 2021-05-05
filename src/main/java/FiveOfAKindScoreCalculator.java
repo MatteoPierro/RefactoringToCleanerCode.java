@@ -14,4 +14,8 @@ public class FiveOfAKindScoreCalculator {
 
         return 0;
     }
+
+    static boolean isFiveOfAKind(ScoringType scoringType) {
+        return scoringType == ScoringType.FiveOfAKind;
+    }
 }
