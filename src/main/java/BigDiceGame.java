@@ -2,7 +2,7 @@ public class BigDiceGame {
     public static int CalculateScore(ScoringType scoringType, int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
         {
             if (new PairScoreCalculator().isSomething(scoringType)) {
-                return PairScoreCalculator.calculateScore(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
+                return new PairScoreCalculator().calculateScore(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
             }
         }
         {
