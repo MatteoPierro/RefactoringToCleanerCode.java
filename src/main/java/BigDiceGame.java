@@ -10,7 +10,7 @@ public class BigDiceGame {
             }
 
             case FullHouse: {
-                return baz(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
+                return somethingForFullHouse(firstDie, secondDie, thirdDie, fourthDie, fifthDie);
             }
 
             case FiveOfAKind: {
@@ -37,7 +37,7 @@ public class BigDiceGame {
         return 0;
     }
 
-    private static int baz(int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
+    private static int somethingForFullHouse(int firstDie, int secondDie, int thirdDie, int fourthDie, int fifthDie) {
         int[] tallies;
         var _2 = false;
         int i;
