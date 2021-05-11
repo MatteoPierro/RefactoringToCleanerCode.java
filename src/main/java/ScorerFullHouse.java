@@ -26,11 +26,7 @@ public class ScorerFullHouse implements Scorer {
             return 0;
         }
 
-        if (isThreeOfAKindFound(threeOfAKindFace.get())) {
-            return pairFace.get() * 2 + threeOfAKindFace.get() * 3;
-        }
-
-        return 0;
+        return pairFace.get() * 2 + threeOfAKindFace.get() * 3;
     }
 
     private Optional<Integer> findThreeOfAKindFace(int[] tallies) {
@@ -55,9 +51,5 @@ public class ScorerFullHouse implements Scorer {
             return Optional.empty();
         }
         return Optional.of(pairFace);
-    }
-
-    private boolean isThreeOfAKindFound(int threeOfAKindFace) {
-        return threeOfAKindFace != 0;
     }
 }
