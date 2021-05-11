@@ -13,18 +13,23 @@ public class ScorerFullHouse implements Scorer {
     private int calculateScore(int[] tallies) {
         int pairFace = findPairFace(tallies);
 
-        var threeOfAKindFace = 0;
-        for (var face = 1; face <= 6; face += 1) {
-            if (tallies[face - 1] == 3) {
-                threeOfAKindFace = face;
-            }
-        }
+        int threeOfAKindFace = findThreeOfAKindFace(tallies);
 
         if (isPairFound(pairFace) && isThreeOfAKindFound(threeOfAKindFace)) {
             return pairFace * 2 + threeOfAKindFace * 3;
         }
 
         return 0;
+    }
+
+    private int findThreeOfAKindFace(int[] tallies) {
+        var threeOfAKindFace = 0;
+        for (var face = 1; face <= 6; face += 1) {
+            if (tallies[face - 1] == 3) {
+                threeOfAKindFace = face;
+            }
+        }
+        return threeOfAKindFace;
     }
 
     private int findPairFace(int[] tallies) {
