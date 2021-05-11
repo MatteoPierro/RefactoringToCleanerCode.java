@@ -16,11 +16,11 @@ public class ScorerFullHouse implements Scorer {
         var pairFace = findPairFace(tallies);
         var threeOfAKindFace = findThreeOfAKindFace(tallies);
 
-        if (pairFace.isEmpty() || threeOfAKindFace.isEmpty()) {
-            return 0;
+        if (pairFace.isPresent() && threeOfAKindFace.isPresent()) {
+            return calculateFullHouseScore(pairFace.get(), threeOfAKindFace.get());
         }
+        return 0;
 
-        return calculateFullHouseScore(pairFace.get(), threeOfAKindFace.get());
     }
 
     private int calculateFullHouseScore(Integer pairFace, Integer threeOfAKindFace) {
