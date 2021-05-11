@@ -15,6 +15,10 @@ public class ScorerFullHouse implements Scorer {
     private int calculateScore(int[] tallies) {
         var pairFace = findPairFace(tallies);
 
+        if (pairFace.isEmpty()) {
+            return 0;
+        }
+
         var threeOfAKindFace = findThreeOfAKindFace(tallies);
 
         if (isPairFound(pairFace.get()) && isThreeOfAKindFound(threeOfAKindFace)) {
