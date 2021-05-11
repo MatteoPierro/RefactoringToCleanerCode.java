@@ -1,3 +1,4 @@
+import javax.swing.text.html.Option;
 import java.util.Optional;
 
 public class ScorerFullHouse implements Scorer {
@@ -39,6 +40,7 @@ public class ScorerFullHouse implements Scorer {
                 threeOfAKindFace = face;
             }
         }
+        if(threeOfAKindFace == 0) return Optional.empty();
         return Optional.of(threeOfAKindFace);
     }
 
