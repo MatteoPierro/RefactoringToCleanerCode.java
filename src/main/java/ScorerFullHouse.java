@@ -45,6 +45,9 @@ public class ScorerFullHouse implements Scorer {
                 pairFace = face;
             }
         }
+        if (pairFace == 0) {
+            return Optional.empty();
+        }
         return Optional.of(pairFace);
     }
 
