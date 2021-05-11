@@ -31,19 +31,17 @@ public class ScorerFullHouse implements Scorer {
     }
 
     private Optional<Integer> findThreeOfAKindFace(int[] tallies) {
-        for (var face = 1; face <= 6; face += 1) {
-            if (tallies[face - 1] == 3) {
-                return  Optional.of(face);
-            }
-        }
-
-        return Optional.empty();
+        return findSameFaceOccurrences(tallies, 3);
     }
 
     private Optional<Integer> findPairFace(int[] tallies) {
+        return findSameFaceOccurrences(tallies, 2);
+    }
+
+    private Optional<Integer> findSameFaceOccurrences(int[] tallies, int faceOccurrences) {
         for (var face = 1; face <= 6; face += 1) {
-            if (tallies[face - 1] == 2) {
-                return  Optional.of(face);
+            if (tallies[face - 1] == faceOccurrences) {
+                return Optional.of(face);
             }
         }
 
