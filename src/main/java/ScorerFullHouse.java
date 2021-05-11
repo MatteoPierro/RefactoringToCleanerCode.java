@@ -42,15 +42,11 @@ public class ScorerFullHouse implements Scorer {
     }
 
     private Optional<Integer> findPairFace(int[] tallies) {
-        var pairFace = 0;
         for (var face = 1; face <= 6; face += 1) {
             if (tallies[face - 1] == 2) {
-                pairFace = face;
+                return  Optional.of(face);
             }
         }
-        if (pairFace == 0) {
-            return Optional.empty();
-        }
-        return Optional.of(pairFace);
+        return Optional.empty();
     }
 }
