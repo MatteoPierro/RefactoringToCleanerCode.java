@@ -1,3 +1,5 @@
+import java.util.Optional;
+
 public class ScorerFullHouse implements Scorer {
 
     public boolean canCalculate(ScoringType scoringType) {
@@ -11,12 +13,12 @@ public class ScorerFullHouse implements Scorer {
     }
 
     private int calculateScore(int[] tallies) {
-        int pairFace = findPairFace(tallies);
+        var pairFace = Optional.of(findPairFace(tallies));
 
-        int threeOfAKindFace = findThreeOfAKindFace(tallies);
+        var threeOfAKindFace = findThreeOfAKindFace(tallies);
 
-        if (isPairFound(pairFace) && isThreeOfAKindFound(threeOfAKindFace)) {
-            return pairFace * 2 + threeOfAKindFace * 3;
+        if (isPairFound(pairFace.get()) && isThreeOfAKindFound(threeOfAKindFace)) {
+            return pairFace.get() * 2 + threeOfAKindFace * 3;
         }
 
         return 0;
