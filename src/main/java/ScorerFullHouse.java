@@ -21,7 +21,7 @@ public class ScorerFullHouse implements Scorer {
 
         var threeOfAKindFace = findThreeOfAKindFace(tallies);
 
-        if (isPairFound(pairFace.get()) && isThreeOfAKindFound(threeOfAKindFace)) {
+        if (isThreeOfAKindFound(threeOfAKindFace)) {
             return pairFace.get() * 2 + threeOfAKindFace * 3;
         }
 
@@ -53,9 +53,5 @@ public class ScorerFullHouse implements Scorer {
 
     private boolean isThreeOfAKindFound(int threeOfAKindFace) {
         return threeOfAKindFace != 0;
-    }
-
-    private boolean isPairFound(int pairFace) {
-        return pairFace != 0;
     }
 }
