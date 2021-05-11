@@ -31,14 +31,13 @@ public class ScorerFullHouse implements Scorer {
     }
 
     private Optional<Integer> findThreeOfAKindFace(int[] tallies) {
-        var threeOfAKindFace = 0;
         for (var face = 1; face <= 6; face += 1) {
             if (tallies[face - 1] == 3) {
-                threeOfAKindFace = face;
+                return  Optional.of(face);
             }
         }
-        if(threeOfAKindFace == 0) return Optional.empty();
-        return Optional.of(threeOfAKindFace);
+
+        return Optional.empty();
     }
 
     private Optional<Integer> findPairFace(int[] tallies) {
@@ -47,6 +46,7 @@ public class ScorerFullHouse implements Scorer {
                 return  Optional.of(face);
             }
         }
+
         return Optional.empty();
     }
 }
