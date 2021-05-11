@@ -21,21 +21,21 @@ public class ScorerFullHouse implements Scorer {
 
         var threeOfAKindFace = findThreeOfAKindFace(tallies);
 
-        if (isThreeOfAKindFound(threeOfAKindFace)) {
-            return pairFace.get() * 2 + threeOfAKindFace * 3;
+        if (isThreeOfAKindFound(threeOfAKindFace.get())) {
+            return pairFace.get() * 2 + threeOfAKindFace.get() * 3;
         }
 
         return 0;
     }
 
-    private int findThreeOfAKindFace(int[] tallies) {
+    private Optional<Integer> findThreeOfAKindFace(int[] tallies) {
         var threeOfAKindFace = 0;
         for (var face = 1; face <= 6; face += 1) {
             if (tallies[face - 1] == 3) {
                 threeOfAKindFace = face;
             }
         }
-        return threeOfAKindFace;
+        return Optional.of(threeOfAKindFace);
     }
 
     private Optional<Integer> findPairFace(int[] tallies) {
