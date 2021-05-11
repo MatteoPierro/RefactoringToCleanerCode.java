@@ -1,4 +1,3 @@
-import javax.swing.text.html.Option;
 import java.util.Optional;
 
 public class ScorerFullHouse implements Scorer {
@@ -21,7 +20,11 @@ public class ScorerFullHouse implements Scorer {
             return 0;
         }
 
-        return pairFace.get() * 2 + threeOfAKindFace.get() * 3;
+        return calculateFullHouseScore(pairFace.get(), threeOfAKindFace.get());
+    }
+
+    private int calculateFullHouseScore(Integer pairFace, Integer threeOfAKindFace) {
+        return pairFace * 2 + threeOfAKindFace * 3;
     }
 
     private Optional<Integer> findThreeOfAKindFace(int[] tallies) {
