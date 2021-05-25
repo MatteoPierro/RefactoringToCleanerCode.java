@@ -18,14 +18,11 @@ public class Tally {
     }
 
     boolean containsFiveOfAKind() {
-        var containsFiveOfAKind = false;
-
         for (var faceOccurrence : value()) {
             if (faceOccurrence == 5) {
-                containsFiveOfAKind = true;
-                break;
+                return true;
             }
         }
-        return containsFiveOfAKind;
+        return false;
     }
 }
