@@ -7,11 +7,16 @@ public class ScorerFiveOfAKind implements Scorer {
     }
 
     public int calculate(Tally tally) {
+        var containsFiveOfAKind = false;
+
         for (var faceOccurrence : tally.value()) {
             if (faceOccurrence == 5) {
-                return FIVE_OF_A_KIND_SCORE;
+                containsFiveOfAKind = true;
+                break;
             }
         }
+
+        if(containsFiveOfAKind) return FIVE_OF_A_KIND_SCORE;
 
         return 0;
     }
