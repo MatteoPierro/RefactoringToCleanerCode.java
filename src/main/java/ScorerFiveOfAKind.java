@@ -7,9 +7,7 @@ public class ScorerFiveOfAKind implements Scorer {
     }
 
     public int calculate(Tally tally) {
-        boolean containsFiveOfAKind = tally.containsFiveOfAKind();
-
-        if(containsFiveOfAKind) return FIVE_OF_A_KIND_SCORE;
+        if(tally.containsFiveOfAKind()) return FIVE_OF_A_KIND_SCORE;
 
         return 0;
     }
