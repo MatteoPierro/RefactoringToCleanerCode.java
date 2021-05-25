@@ -9,7 +9,7 @@ public class ScorerTwoPair implements Scorer {
         return calculateScore(tally);
     }
 
-    @Override
+
     public int calculateScore(int[] tally) {
         var numberOfPairsFound = 0;
         var score = 0;
