@@ -16,4 +16,16 @@ public class Tally {
     boolean containsPairFor(int face) {
         return faceOccurrences(face) >= 2;
     }
+
+    boolean containsFiveOfAKind() {
+        var containsFiveOfAKind = false;
+
+        for (var faceOccurrence : value()) {
+            if (faceOccurrence == 5) {
+                containsFiveOfAKind = true;
+                break;
+            }
+        }
+        return containsFiveOfAKind;
+    }
 }
