@@ -6,8 +6,7 @@ public class ScorerFullHouse implements Scorer {
         return scoringType == ScoringType.FullHouse;
     }
 
-    public int calculate(Roll roll) {
-        var tally = roll.tally();
+    public int calculate(int[] tally) {
 
         return calculateScore(tally);
     }

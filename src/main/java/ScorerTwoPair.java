@@ -4,8 +4,7 @@ public class ScorerTwoPair implements Scorer {
         return scoringType == ScoringType.TwoPair;
     }
 
-    public int calculate(Roll roll) {
-        var tally = roll.tally();
+    public int calculate(int[] tally) {
 
         return calculateScore(tally);
     }
