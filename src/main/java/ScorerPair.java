@@ -8,7 +8,7 @@ public class ScorerPair implements Scorer {
     @Override
     public int calculate(Tally tally) {
         for (var face = 6; face >= 1; face--) {
-            if (isPair(tally.value()[face - 1])) {
+            if (tally.containsPairFor(face)) {
                 return face * 2;
             }
         }
