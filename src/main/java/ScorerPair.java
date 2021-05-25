@@ -16,8 +16,4 @@ public class ScorerPair implements Scorer {
         return 0;
     }
 
-    private boolean isPair(int faceOccurrences) {
-        return faceOccurrences >= 2;
-    }
-
 }
