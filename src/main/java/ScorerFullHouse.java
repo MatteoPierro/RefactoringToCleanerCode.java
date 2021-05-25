@@ -12,7 +12,7 @@ public class ScorerFullHouse implements Scorer {
         return calculateScore(tally);
     }
 
-    private int calculateScore(int[] tallies) {
+    public int calculateScore(int[] tallies) {
         var pairFace = findPairFace(tallies);
         var threeOfAKindFace = findThreeOfAKindFace(tallies);
 
