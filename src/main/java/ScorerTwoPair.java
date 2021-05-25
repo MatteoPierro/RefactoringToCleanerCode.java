@@ -9,7 +9,7 @@ public class ScorerTwoPair implements Scorer {
         var score = 0;
 
         for (var face = 6; face >= 1; face--) {
-            if (isPair(tally.faceOccurrences(face))) {
+            if (tally.containsPairFor(face)) {
                 numberOfPairsFound++;
                 score += face * 2;
             }
@@ -22,7 +22,4 @@ public class ScorerTwoPair implements Scorer {
         return 0;
     }
 
-    private boolean isPair(int faceOccurrences) {
-        return faceOccurrences >= 2;
-    }
 }

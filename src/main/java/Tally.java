@@ -12,4 +12,8 @@ public class Tally {
     int faceOccurrences(int face) {
         return value()[face - 1];
     }
+
+    boolean containsPairFor(int face) {
+        return faceOccurrences(face) >= 2;
+    }
 }
