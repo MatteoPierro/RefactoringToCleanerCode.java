@@ -4,12 +4,12 @@ public class ScorerTwoPair implements Scorer {
         return scoringType == ScoringType.TwoPair;
     }
 
-    public int calculate(int[] tally) {
+    public int calculate(Tally tally) {
         var numberOfPairsFound = 0;
         var score = 0;
 
         for (var face = 6; face >= 1; face--) {
-            if (isPair(tally[face - 1])) {
+            if (isPair(tally.value()[face - 1])) {
                 numberOfPairsFound++;
                 score += face * 2;
             }
@@ -21,7 +21,7 @@ public class ScorerTwoPair implements Scorer {
 
         return 0;
     }
-    
+
     private boolean isPair(int faceOccurrences) {
         return faceOccurrences >= 2;
     }

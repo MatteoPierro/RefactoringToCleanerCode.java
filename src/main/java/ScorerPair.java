@@ -6,9 +6,9 @@ public class ScorerPair implements Scorer {
     }
 
     @Override
-    public int calculate(int[] tally) {
+    public int calculate(Tally tally) {
         for (var face = 6; face >= 1; face--) {
-            if (isPair(tally[face - 1])) {
+            if (isPair(tally.value()[face - 1])) {
                 return face * 2;
             }
         }

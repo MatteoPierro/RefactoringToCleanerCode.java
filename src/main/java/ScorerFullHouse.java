@@ -6,9 +6,9 @@ public class ScorerFullHouse implements Scorer {
         return scoringType == ScoringType.FullHouse;
     }
 
-    public int calculate(int[] tally) {
-        var pairFace = findPairFace(tally);
-        var threeOfAKindFace = findThreeOfAKindFace(tally);
+    public int calculate(Tally tally) {
+        var pairFace = findPairFace(tally.value());
+        var threeOfAKindFace = findThreeOfAKindFace(tally.value());
 
         if (isFullHouse(pairFace, threeOfAKindFace)) {
             return calculateFullHouseScore(pairFace.get(), threeOfAKindFace.get());

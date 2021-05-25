@@ -7,7 +7,7 @@ public class BigDiceGame {
         return Stream.of(SCORERS)
                 .filter(scorer -> scorer.canCalculate(scoringType))
                 .findFirst()
-                    .map(scorer -> scorer.calculate(roll.tally()))
+                    .map(scorer -> scorer.calculate(new Tally(roll.tally())))
                 .orElse(0);
 
     }

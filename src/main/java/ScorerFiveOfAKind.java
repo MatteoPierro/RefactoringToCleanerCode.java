@@ -6,8 +6,8 @@ public class ScorerFiveOfAKind implements Scorer {
         return scoringType == ScoringType.FiveOfAKind;
     }
 
-    public int calculate(int[] tally) {
-        for (var faceOccurrence : tally) {
+    public int calculate(Tally tally) {
+        for (var faceOccurrence : tally.value()) {
             if (faceOccurrence == 5) {
                 return FIVE_OF_A_KIND_SCORE;
             }
