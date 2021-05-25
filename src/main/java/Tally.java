@@ -8,4 +8,8 @@ public class Tally {
     public int[] value() {
         return tally;
     }
+
+    int faceOccurrences(int face) {
+        return value()[face - 1];
+    }
 }
