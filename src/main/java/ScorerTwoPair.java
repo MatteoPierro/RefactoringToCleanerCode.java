@@ -5,12 +5,6 @@ public class ScorerTwoPair implements Scorer {
     }
 
     public int calculate(int[] tally) {
-
-        return calculateScore(tally);
-    }
-
-
-    public int calculateScore(int[] tally) {
         var numberOfPairsFound = 0;
         var score = 0;
 
@@ -27,7 +21,7 @@ public class ScorerTwoPair implements Scorer {
 
         return 0;
     }
-
+    
     private boolean isPair(int faceOccurrences) {
         return faceOccurrences >= 2;
     }

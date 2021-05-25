@@ -7,13 +7,8 @@ public class ScorerFullHouse implements Scorer {
     }
 
     public int calculate(int[] tally) {
-
-        return calculateScore(tally);
-    }
-
-    public int calculateScore(int[] tallies) {
-        var pairFace = findPairFace(tallies);
-        var threeOfAKindFace = findThreeOfAKindFace(tallies);
+        var pairFace = findPairFace(tally);
+        var threeOfAKindFace = findThreeOfAKindFace(tally);
 
         if (isFullHouse(pairFace, threeOfAKindFace)) {
             return calculateFullHouseScore(pairFace.get(), threeOfAKindFace.get());

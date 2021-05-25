@@ -7,11 +7,6 @@ public class ScorerPair implements Scorer {
 
     @Override
     public int calculate(int[] tally) {
-
-        return calculateScore(tally);
-    }
-
-    public int calculateScore(int[] tally) {
         for (var face = 6; face >= 1; face--) {
             if (isPair(tally[face - 1])) {
                 return face * 2;

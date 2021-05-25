@@ -7,11 +7,6 @@ public class ScorerFiveOfAKind implements Scorer {
     }
 
     public int calculate(int[] tally) {
-
-        return calculateScore(tally);
-    }
-
-    public int calculateScore(int[] tally) {
         for (var faceOccurrence : tally) {
             if (faceOccurrence == 5) {
                 return FIVE_OF_A_KIND_SCORE;
@@ -20,4 +15,5 @@ public class ScorerFiveOfAKind implements Scorer {
 
         return 0;
     }
+
 }
